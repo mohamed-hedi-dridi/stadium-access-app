@@ -9,7 +9,8 @@ import {
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
-  ScrollView
+  ScrollView,
+  Image
 } from 'react-native';
 import { router } from 'expo-router';
 import { authService } from '../services/api';
@@ -56,8 +57,13 @@ export default function LoginScreen() {
     >
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.header}>
-          <Text style={styles.title}>Stadium Access</Text>
-          <Text style={styles.subtitle}>Connexion Agent</Text>
+          <Image 
+            source={require('../assets/images/logo-club-africain.svg')} 
+            style={styles.logo}
+            resizeMode="contain"
+          />
+          <Text style={styles.title}>Lefri9i Passeport</Text>
+          <Text style={styles.subtitle}>Connexion</Text>
         </View>
 
         <View style={styles.form}>
@@ -104,7 +110,7 @@ export default function LoginScreen() {
             Application de contrôle d'accès au stade
           </Text>
           <Text style={styles.footerText}>
-            Club Africain - Version 1.0
+            Club Africain By Lefri9i Passport - Version 1.0
           </Text>
         </View>
       </ScrollView>
@@ -125,6 +131,11 @@ const styles = StyleSheet.create({
   header: {
     alignItems: 'center',
     marginBottom: 40,
+  },
+  logo: {
+    width: 80,
+    height: 80,
+    marginBottom: 20,
   },
   title: {
     fontSize: 32,

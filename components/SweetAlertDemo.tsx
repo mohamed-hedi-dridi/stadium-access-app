@@ -9,28 +9,28 @@ const SweetAlertDemo: React.FC = () => {
   const handleSuccess = async () => {
     await showSuccess(
       '✅ Opération réussie',
-      'Votre billet a été scanné avec succès!\n\nSiège: A12\nMatch: Real Madrid vs Barcelona\nAgent: Jean Dupont'
+      'Votre passeport a été scanné avec succès!\n\nSiège: A12\nMatch: Real Madrid vs Barcelona\nAgent: Jean Dupont'
     );
   };
 
   const handleError = async () => {
     await showError(
       '❌ Erreur de scan',
-      'Ce billet n\'est pas valide pour ce match.\n\nVeuillez vérifier le passeport et réessayer.'
+      'Ce passeport n\'est pas valide pour ce match.\n\nVeuillez vérifier le passeport et réessayer.'
     );
   };
 
   const handleWarning = async () => {
     await showWarning(
       '⚠️ Attention',
-      'Ce billet a déjà été scanné.\n\nVérifiez l\'identité du porteur avant de continuer.'
+      'Ce passeport a déjà été scanné.\n\nVérifiez l\'identité du porteur avant de continuer.'
     );
   };
 
   const handleInfo = async () => {
     await showInfo(
       'ℹ️ Information',
-      'Positionnez le code QR du billet dans le cadre de scan.\n\nAssurez-vous que le code est bien visible.'
+      'Positionnez le code QR du passeport dans le cadre de scan.\n\nAssurez-vous que le code est bien visible.'
     );
   };
 

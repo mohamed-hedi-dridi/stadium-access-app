@@ -78,7 +78,7 @@ function RootLayoutNav() {
             name="scan/[matchId]" 
             options={{ 
               headerShown: false,
-              title: 'Scanner Billet'
+              title: 'Scanner Passeport'
             }} 
           />
           <Stack.Screen name="modal" options={{ presentation: 'modal' }} />

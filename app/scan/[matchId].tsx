@@ -156,7 +156,7 @@ export default function ScanScreen() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Text style={styles.backText}>← Retour</Text>
         </TouchableOpacity>
-        <Text style={styles.title}>Scanner Billet</Text>
+        <Text style={styles.title}>Scanner Passeport</Text>
         <View style={styles.placeholder} />
       </View>
 
@@ -164,7 +164,7 @@ export default function ScanScreen() {
         <View style={styles.instructionsContainer}>
           <Text style={styles.instructionsTitle}>Instructions de scan</Text>
           <Text style={styles.instructionsText}>
-            • Positionnez le code QR du billet dans le cadre
+            • Positionnez le code QR du passeport dans le cadre
           </Text>
           <Text style={styles.instructionsText}>
             • Assurez-vous que le code est bien visible
@@ -210,8 +210,7 @@ export default function ScanScreen() {
               styles.resultText,
               { color: scanResult.success ? '#27ae60' : '#e74c3c' }
             ]}>
-              {scanResult.success ? '✅ Billet valide' : '❌ Billet invalide'}
-            </Text>
+              Passeport valide            </Text>
             {scanResult.success && scanResult.ticket && (
               <Text style={styles.resultDetails}>
                 Siège: {scanResult.ticket.seatNumber}
