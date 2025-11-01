@@ -58,7 +58,7 @@ export default function LoginScreen() {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.header}>
           <Image 
-            source={require('../assets/images/logo-club-africain.svg')} 
+            source={require('../assets/images/logo-club-africain.png')} 
             style={styles.logo}
             resizeMode="contain"
           />
@@ -73,7 +73,8 @@ export default function LoginScreen() {
               style={styles.input}
               value={email}
               onChangeText={setEmail}
-              placeholder="votre.email@clubafricain.com"
+              placeholder="votre Adresse Email"
+              placeholderTextColor="#333"
               keyboardType="email-address"
               autoCapitalize="none"
               autoCorrect={false}
@@ -87,6 +88,7 @@ export default function LoginScreen() {
               value={password}
               onChangeText={setPassword}
               placeholder="Votre mot de passe"
+              placeholderTextColor="#333"
               secureTextEntry
               autoCapitalize="none"
             />
@@ -172,11 +174,12 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#807e7e',
     borderRadius: 8,
     padding: 12,
     fontSize: 16,
     backgroundColor: '#f9f9f9',
+    color: '#000000',
   },
   loginButton: {
     backgroundColor: '#e74c3c',
